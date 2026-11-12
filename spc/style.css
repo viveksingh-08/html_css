@@ -1,88 +1,94 @@
-*{
+/* *{
       font-family: "Montserrat", sans-serif;
-}
+} */
 
-body{
+body {
     margin: 0;
+    font-family: "Montserrat", sans-serif;
     background-color: #000;
     color: #fff;
     overflow: hidden;
 }
 
-.main{
+.main {
     display: flex;
     height: 100vh;
 }
 
-.sidebar{
+.sidebar {
     background-color: black;
     width: 340px;
     border-radius: 1rem;
 }
 
-.main-content{
+.main-content {
     background-color: #121212;
     flex: 1;
     border-radius: 1rem;
     overflow: auto;
 }
 
-.music-player{
-    background-color:black;
+.music-player {
+    background-color: black;
     position: fixed;
     bottom: 0;
     height: 72px;
     width: 100%;
 }
 
-a{
+a {
     text-decoration: none;
     color: #fff;
 }
 
-.nav{
+.nav {
     background-color: #121212;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100px;
+    /* height: 100px; */
     padding: 0.5rem 0.75rem;
 }
 
-.nav-option{
+.nav-option {
     line-height: 2.5rem;
     opacity: 0.7;
     padding: 0.5rem;
 }
 
-.nav-option:hover{
+.nav-option:hover {
     opacity: 1;
 }
 
-.nav-option i{
+.nav-option i {
     font-size: 1.25rem;
 }
 
-.nav-option a{
+.nav-option a {
     font-size: 1 rem;
     margin-left: 1rem;
 }
 
-.library{
+.library {
     background-color: #121212;
     border-radius: 1rem;
     height: 100%;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    padding: 0.5rem 0.75rem;
 }
 
-.options{
+.options {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.lib-options img{
+.lib-options img {
     height: 1.25rem;
     width: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
 }
