@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chauhan Fitness</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 1000px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+        }
+
+        /* LOGO SECTION */
+        .logo-wrapper {
+            position: relative;
+            width: 160px;
+            height: 160px;
+        }
+
+        .logo-wrapper img {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ff7b00;
+        }
+
+        /* SVG TEXT ROTATION */
+        .logo-wrapper svg {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            animation: rotate 12s linear infinite;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* .logo-wrapper {
+            position: sticky;
+        } */
+
+        .circle-text {
+            fill: #ff7b00;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navbar li a:hover {
+            color: #ff7b00;
+            border-bottom: 2px solid #ff7b00;
+        }
+
+        /* BUTTONS */
+        .right button {
+            padding: 8px 18px;
+            margin-left: 10px;
+            border-radius: 20px;
+            border: none;
+            background: #ff7b00;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .right button:hover {
+            background: white;
+            color: black;
+        }
+
+        /* FORM */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255, 123, 0, 0.6);
+        }
+
+        .form h2 {
+            margin-bottom: 20px;
+            color: #ff7b00;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .gender {
+            margin: 10px 0;
+        }
+
+        .form button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            background: #ff7b00;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .form button:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- PERFECT CIRCLE TEXT LOGO -->
+        <div class="logo-wrapper">
+
+            <svg viewBox="0 0 200 200">
+                <defs>
+                    <path id="circlePath" d="M 100, 100
+                           m -75, 0
+                           a 75,75 0 1,1 150,0
+                           a 75,75 0 1,1 -150,0" />
+                </defs>
+
+                <text class="circle-text">
+                    <textPath href="#circlePath">
+                        CHAUHAN FITNESS • CHAUHAN FITNESS •
+                    </textPath>
+                </text>
+            </svg>
+
+            <img src="https://i.pinimg.com/736x/00/cd/8e/00cd8eabf948d596af53e10361a99928.jpg" alt="logo">
+
+        </div>
+
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="right">
+            <button>Email</button>
+            <button>Join Now</button>
+        </div>
+
+    </header>
+
+    <div class="form-container">
+        <form class="form">
+            <h2>Join Our Fitness Club</h2>
+
+            <input type="text" placeholder="Enter your name" required>
+            <input type="number" placeholder="Enter your phone number" required>
+            <input type="number" placeholder="Enter your age" required>
+            <input type="number" placeholder="Enter your body weight" required>
+            <input type="email" placeholder="Enter your email" required>
+
+            <div class="gender">
+                Gender:
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
